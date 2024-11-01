@@ -42,6 +42,9 @@ function twitter() {
 
   function addTweetLS(newTweet) {
     let tweets = loadingTweetsLS();
+    tweets.push(newTweet);
+    console.log(tweets);
+    localStorage.setItem(JSON.stringify(tweets));
   }
 
   function deleteTweet(e) {
